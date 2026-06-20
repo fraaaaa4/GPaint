@@ -1,0 +1,6 @@
+<svg width="16" height="16">
+  <path
+    d="M 1,1 V 15 H 15 V 1 Z M 14,2 14,14 2,14 2,2 Z"
+    overflow="visible"
+    fill="#bebebe" />
+</svg>

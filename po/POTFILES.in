@@ -1,0 +1,9 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/org.fratta.gpaint.desktop.in
+data/org.fratta.gpaint.metainfo.xml.in
+data/org.fratta.gpaint.gschema.xml
+src/main.js
+src/window.js
+src/window.ui
+src/shortcuts-dialog.ui

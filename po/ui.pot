@@ -1,0 +1,968 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-19 14:40+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/file_dialogs.js:169
+msgid "Save drawing"
+msgstr ""
+
+#: src/file_dialogs.js:203
+msgid "Save drawing as"
+msgstr ""
+
+#: src/file_dialogs.js:223
+msgid "Open image"
+msgstr ""
+
+#: src/file_dialogs.js:240
+msgid "Import Image"
+msgstr ""
+
+#: src/main.js:53 src/window.ui:6
+msgid "GPaint"
+msgstr ""
+
+#: src/main.js:61
+msgid "fratta (English and Italian)"
+msgstr ""
+
+#: src/preferences.js:10 src/window.ui:476
+msgid "Preferences"
+msgstr ""
+
+#: src/preferences.js:15 src/shortcuts-dialog.ui:9
+msgid "General"
+msgstr ""
+
+#: src/preferences.js:22
+msgid "Clear all"
+msgstr ""
+
+#: src/preferences.js:23
+msgid "When I clear an image..."
+msgstr ""
+
+#: src/preferences.js:28
+msgid "Fill the canvas with the primary color"
+msgstr ""
+
+#: src/preferences.js:38
+msgid "Fill the canvas with the secondary color"
+msgstr ""
+
+#: src/preferences.js:49
+msgid "Fill the canvas with this color"
+msgstr ""
+
+#: src/preferences.js:67
+msgid "Make the canvas transparent"
+msgstr ""
+
+#: src/preferences.js:109
+msgid "Saving"
+msgstr ""
+
+#: src/preferences.js:110
+msgid ""
+"When a transparent image is saved as JPEG or BMP, transparency isn't "
+"supported. How should that space be filled with?"
+msgstr ""
+
+#: src/preferences.js:115
+msgid "Color"
+msgstr ""
+
+#: src/preferences.js:132
+msgid "Checkerboard pattern"
+msgstr ""
+
+#: src/preferences.js:161
+msgid "Grid"
+msgstr ""
+
+#: src/preferences.js:162
+msgid "Configure the drawing grid"
+msgstr ""
+
+#: src/preferences.js:167
+msgid "Grid size (pixels)"
+msgstr ""
+
+#: src/preferences.js:183
+msgid "Grid color"
+msgstr ""
+
+#: src/preferences.js:204
+msgid "Confirmations"
+msgstr ""
+
+#: src/preferences.js:205
+msgid "Show or hide confirmation dialogs before doing operations"
+msgstr ""
+
+#: src/preferences.js:210
+msgid "Ask for confirmation before clearing the canvas"
+msgstr ""
+
+#: src/window.js:244 src/window.ui:1042
+msgid "Text"
+msgstr ""
+
+#: src/window.js:297
+msgid "Clear Canvas?"
+msgstr ""
+
+#: src/window.js:298
+msgid ""
+"Are you sure you want to clear the entire image? This action can be undone."
+msgstr ""
+
+#: src/window.js:301 src/window.js:3354 src/window.js:3384
+msgid "Cancel"
+msgstr ""
+
+#: src/window.js:302
+msgid "Clear All"
+msgstr ""
+
+#: src/window.js:2862
+msgid "Pencil options"
+msgstr ""
+
+#: src/window.js:2863
+msgid "Line shape:"
+msgstr ""
+
+#: src/window.js:2864 src/window.js:3058
+msgid "Round"
+msgstr ""
+
+#: src/window.js:2865 src/window.js:3004 src/window.js:3059
+msgid "Squared"
+msgstr ""
+
+#: src/window.js:2867 src/window.js:3062
+msgid "Contour"
+msgstr ""
+
+#: src/window.js:2868 src/window.js:2878 src/window.js:2907 src/window.js:2996
+#: src/window.js:3065
+msgid "Antialiasing"
+msgstr ""
+
+#: src/window.js:2871
+msgid "Brush options"
+msgstr ""
+
+#: src/window.js:2872
+msgid "Brush type:"
+msgstr ""
+
+#: src/window.js:2873
+msgid "Simple"
+msgstr ""
+
+#: src/window.js:2874
+msgid "Airbrush"
+msgstr ""
+
+#: src/window.js:2875
+msgid "Hairy"
+msgstr ""
+
+#: src/window.js:2876
+msgid "Calligraphic"
+msgstr ""
+
+#: src/window.js:2881
+msgid "Eraser options"
+msgstr ""
+
+#: src/window.js:2882
+msgid "Eraser type:"
+msgstr ""
+
+#: src/window.js:2883
+msgid "Normal"
+msgstr ""
+
+#: src/window.js:2884
+msgid "Pixel"
+msgstr ""
+
+#: src/window.js:2886
+msgid "Eraser mode:"
+msgstr ""
+
+#: src/window.js:2887
+msgid "Solid"
+msgstr ""
+
+#: src/window.js:2888
+msgid "Blur"
+msgstr ""
+
+#: src/window.js:2889
+msgid "Mix pixels"
+msgstr ""
+
+#: src/window.js:2890
+msgid "Mix blur"
+msgstr ""
+
+#: src/window.js:2891
+msgid "Mosaic"
+msgstr ""
+
+#: src/window.js:2893
+msgid "Substitute with:"
+msgstr ""
+
+#: src/window.js:2894
+msgid "Transparency"
+msgstr ""
+
+#: src/window.js:2895 src/window.js:3071 src/window.js:3082
+msgid "Primary color"
+msgstr ""
+
+#: src/window.js:2896 src/window.js:3072 src/window.js:3083
+msgid "Secondary color"
+msgstr ""
+
+#: src/window.js:2900
+msgid "Highlight options"
+msgstr ""
+
+#: src/window.js:2901
+msgid "Add transparency"
+msgstr ""
+
+#: src/window.js:2902
+msgid "Straighten"
+msgstr ""
+
+#: src/window.js:2903 src/window.ui:226
+msgid "Background:"
+msgstr ""
+
+#: src/window.js:2904
+msgid "Dark text on light background"
+msgstr ""
+
+#: src/window.js:2905
+msgid "Light text on dark background"
+msgstr ""
+
+#: src/window.js:2910
+msgid "Text options"
+msgstr ""
+
+#: src/window.js:2914
+msgid "Font:"
+msgstr ""
+
+#: src/window.js:2987 src/window.js:3635
+msgid "Background"
+msgstr ""
+
+#: src/window.js:2990
+msgid "Shadow"
+msgstr ""
+
+#: src/window.js:2991
+msgid "Contour:"
+msgstr ""
+
+#: src/window.js:2992
+msgid "None"
+msgstr ""
+
+#: src/window.js:2993
+msgid "Thin contour"
+msgstr ""
+
+#: src/window.js:2994
+msgid "Thick contour"
+msgstr ""
+
+#: src/window.js:2999
+msgid "Point selection"
+msgstr ""
+
+#: src/window.js:3000 src/window.js:3057
+msgid "Shape:"
+msgstr ""
+
+#: src/window.js:3001 src/window.js:4140 src/window.ui:1214
+msgid "Circle"
+msgstr ""
+
+#: src/window.js:3002
+msgid "Cross"
+msgstr ""
+
+#: src/window.js:3003
+msgid "X cross"
+msgstr ""
+
+#: src/window.js:3008
+msgid "Add a number"
+msgstr ""
+
+#: src/window.js:3016
+msgid "Next number:"
+msgstr ""
+
+#: src/window.js:3025
+msgid "Reset to 1"
+msgstr ""
+
+#: src/window.js:3056
+msgid "Line options"
+msgstr ""
+
+#: src/window.js:3061
+msgid "Gradient"
+msgstr ""
+
+#: src/window.js:3063
+msgid "Locked direction"
+msgstr ""
+
+#: src/window.js:3064
+msgid "Arrow"
+msgstr ""
+
+#: src/window.js:3068
+msgid "Shapes options"
+msgstr ""
+
+#: src/window.js:3069
+msgid "Fill:"
+msgstr ""
+
+#: src/window.js:3070
+msgid "Empty"
+msgstr ""
+
+#: src/window.js:3074
+msgid "Outline options"
+msgstr ""
+
+#: src/window.js:3076
+msgid "Draw outline"
+msgstr ""
+
+#: src/window.js:3081
+msgid "Outline color:"
+msgstr ""
+
+#: src/window.js:3089
+msgid "Outline thickness:"
+msgstr ""
+
+#: src/window.js:3120
+msgid "Fill options"
+msgstr ""
+
+#: src/window.js:3121 src/window.js:3131
+msgid "Type:"
+msgstr ""
+
+#: src/window.js:3122
+msgid "Circle and fill"
+msgstr ""
+
+#: src/window.js:3123
+msgid "Remove and substitute"
+msgstr ""
+
+#: src/window.js:3124
+msgid "Whole image"
+msgstr ""
+
+#: src/window.js:3125
+msgid "Remove color"
+msgstr ""
+
+#: src/window.js:3126
+msgid "Linear gradient"
+msgstr ""
+
+#: src/window.js:3130
+msgid "Selection options"
+msgstr ""
+
+#: src/window.js:3132
+msgid "Standard"
+msgstr ""
+
+#: src/window.js:3133
+msgid "Transparent selection"
+msgstr ""
+
+#: src/window.js:3134
+msgid "Invert selection"
+msgstr ""
+
+#: src/window.js:3139
+msgid "Transform"
+msgstr ""
+
+#: src/window.js:3350 src/window.js:3380
+msgid "Save changes?"
+msgstr ""
+
+#: src/window.js:3351
+msgid ""
+"Your drawing has unsaved changes. Do you want to save them before continuing?"
+msgstr ""
+
+#: src/window.js:3355 src/window.js:3385
+msgid "Discard"
+msgstr ""
+
+#: src/window.js:3356 src/window.js:3386 src/shortcuts-dialog.ui:27
+msgid "Save"
+msgstr ""
+
+#: src/window.js:3381
+msgid ""
+"Your drawing has unsaved changes. Do you want to save them before closing?"
+msgstr ""
+
+#: src/window.js:3531 src/window.js:3545 src/window.ui:428
+msgid "Image Properties"
+msgstr ""
+
+#: src/window.js:3560
+msgid "Image"
+msgstr ""
+
+#: src/window.js:3562
+msgid "Dimensions"
+msgstr ""
+
+#: src/window.js:3566
+msgid "Color mode"
+msgstr ""
+
+#: src/window.js:3567
+msgid "ARGB32 (with alpha channel)"
+msgstr ""
+
+#: src/window.js:3570
+msgid "Zoom level"
+msgstr ""
+
+#: src/window.js:3574
+msgid "Total pixels"
+msgstr ""
+
+#: src/window.js:3579
+msgid "File"
+msgstr ""
+
+#: src/window.js:3580 src/window.js:3946 src/window.js:3955 src/window.js:3970
+msgid "Untitled"
+msgstr ""
+
+#: src/window.js:3582
+msgid "Name"
+msgstr ""
+
+#: src/window.js:3586
+msgid "Not saved yet"
+msgstr ""
+
+#: src/window.js:3587 src/window.js:3640 src/window.js:3644
+msgid "Yes"
+msgstr ""
+
+#: src/window.js:3587 src/window.js:3640 src/window.js:3644
+msgid "No"
+msgstr ""
+
+#: src/window.js:3588
+msgid "PNG (default)"
+msgstr ""
+
+#: src/window.js:3607
+msgid "Size"
+msgstr ""
+
+#: src/window.js:3611
+msgid "Format"
+msgstr ""
+
+#: src/window.js:3615
+msgid "Last modified"
+msgstr ""
+
+#: src/window.js:3619
+msgid "Folder"
+msgstr ""
+
+#: src/window.js:3624
+msgid "Full path"
+msgstr ""
+
+#: src/window.js:3630
+msgid "Canvas"
+msgstr ""
+
+#: src/window.js:3632 src/window.ui:238
+msgid "Transparent"
+msgstr ""
+
+#: src/window.js:3633
+msgid "Custom color"
+msgstr ""
+
+#: src/window.js:3633
+msgid "White"
+msgstr ""
+
+#: src/window.js:3639
+msgid "Show grid"
+msgstr ""
+
+#: src/window.js:3643
+msgid "Pixel view"
+msgstr ""
+
+#: src/window.js:3687 src/shortcuts-dialog.ui:74
+msgid "Cut"
+msgstr ""
+
+#: src/window.js:3688 src/shortcuts-dialog.ui:68
+msgid "Copy"
+msgstr ""
+
+#: src/window.js:3689 src/shortcuts-dialog.ui:80
+msgid "Paste"
+msgstr ""
+
+#: src/window.js:3708
+msgid "Delete"
+msgstr ""
+
+#: src/window.js:3709
+msgid "Invert selection colors"
+msgstr ""
+
+#: src/window.js:3919
+msgid "Not saved"
+msgstr ""
+
+#: src/window.js:4129
+msgid "Brush (B)"
+msgstr ""
+
+#: src/window.js:4130
+msgid "Pencil (P)"
+msgstr ""
+
+#: src/window.js:4131 src/window.ui:890
+msgid "Highlighter"
+msgstr ""
+
+#: src/window.js:4132
+msgid "Eraser (E)"
+msgstr ""
+
+#: src/window.js:4133
+msgid "Fill (F)"
+msgstr ""
+
+#: src/window.js:4134
+msgid "Color picker (C)"
+msgstr ""
+
+#: src/window.js:4135
+msgid "Text (T)"
+msgstr ""
+
+#: src/window.js:4136 src/window.ui:1070
+msgid "Points"
+msgstr ""
+
+#: src/window.js:4137 src/window.ui:1141
+msgid "Line"
+msgstr ""
+
+#: src/window.js:4138 src/window.ui:1165
+msgid "Rectangle"
+msgstr ""
+
+#: src/window.js:4139 src/window.ui:1190
+msgid "Oval"
+msgstr ""
+
+#: src/window.js:4141 src/window.ui:1238
+msgid "Polygon"
+msgstr ""
+
+#: src/window.js:4142 src/window.ui:1262
+msgid "Closed freehand"
+msgstr ""
+
+#: src/window.js:4208 src/window.js:4220
+msgid "Roundness"
+msgstr ""
+
+#: src/window.js:4210 src/window.js:4223
+msgid "Point size"
+msgstr ""
+
+#: src/window.js:4212 src/window.ui:1391
+msgid "Thickness"
+msgstr ""
+
+#: src/window.js:4225 src/window.ui:1413
+msgid "Brush size"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:12
+msgid "General Actions"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:15
+msgid "New Drawing"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:21
+msgid "Open Image"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:33
+msgid "Print"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:39 src/window.ui:276
+msgid "Undo"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:45 src/window.ui:285
+msgid "Redo"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:51
+msgid "Quit"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:62
+msgid "Edit"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:65
+msgid "Selection & Clipboard"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:86
+msgid "Delete Selection"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:97
+msgid "View"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:100
+msgid "Zoom Options"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:103
+msgid "Zoom In"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:109
+msgid "Zoom Out"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:115
+msgid "Reset Zoom"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:121 src/window.ui:574
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:132
+msgid "Tools"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:135
+msgid "Drawing Tools"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:138 src/window.ui:834
+msgid "Brush"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:144 src/window.ui:862
+msgid "Pencil"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:150 src/window.ui:918
+msgid "Eraser"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:156
+msgid "Color Picker"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:162 src/window.ui:966
+msgid "Fill"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:168
+msgid "Selection Tool"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:174
+msgid "Text Tool"
+msgstr ""
+
+#: src/window.ui:42
+msgid "You must save this image before renaming"
+msgstr ""
+
+#: src/window.ui:57
+msgid "Rename File"
+msgstr ""
+
+#: src/window.ui:75
+msgid "Rename"
+msgstr ""
+
+#: src/window.ui:105
+msgid "Open folder"
+msgstr ""
+
+#: src/window.ui:112
+msgid "Copy path"
+msgstr ""
+
+#: src/window.ui:133
+msgid "New drawing"
+msgstr ""
+
+#: src/window.ui:148
+msgid "New"
+msgstr ""
+
+#: src/window.ui:170
+msgid "Canvas size"
+msgstr ""
+
+#: src/window.ui:183
+msgid "Width:"
+msgstr ""
+
+#: src/window.ui:198
+msgid "Height:"
+msgstr ""
+
+#: src/window.ui:246
+msgid "Create"
+msgstr ""
+
+#: src/window.ui:259
+msgid "New from Clipboard"
+msgstr ""
+
+#: src/window.ui:294
+msgid "Clear canvas"
+msgstr ""
+
+#: src/window.ui:330
+msgid "System theme"
+msgstr ""
+
+#: src/window.ui:344
+msgid "Light theme"
+msgstr ""
+
+#: src/window.ui:358
+msgid "Dark theme"
+msgstr ""
+
+#: src/window.ui:384
+msgid "Show Tool Labels"
+msgstr ""
+
+#: src/window.ui:390
+msgid "Center Canvas"
+msgstr ""
+
+#: src/window.ui:396
+msgid "Show Status Bar"
+msgstr ""
+
+#: src/window.ui:402
+msgid "Show Grid"
+msgstr ""
+
+#: src/window.ui:408
+msgid "Pixel View"
+msgstr ""
+
+#: src/window.ui:448
+msgid "Print..."
+msgstr ""
+
+#: src/window.ui:501
+msgid "Open With..."
+msgstr ""
+
+#: src/window.ui:521
+msgid "Save As..."
+msgstr ""
+
+#: src/window.ui:546
+msgid "New Window"
+msgstr ""
+
+#: src/window.ui:602
+msgid "About GPaint"
+msgstr ""
+
+#: src/window.ui:627
+msgid "Close"
+msgstr ""
+
+#: src/window.ui:655
+msgid "Save (Ctrl+S)"
+msgstr ""
+
+#: src/window.ui:664
+msgid "Open Image (Ctrl+O)"
+msgstr ""
+
+#: src/window.ui:686 src/window.ui:701
+msgid "Selection"
+msgstr ""
+
+#: src/window.ui:719
+msgid "Rectangular selection"
+msgstr ""
+
+#: src/window.ui:727
+msgid "Free selection"
+msgstr ""
+
+#: src/window.ui:736
+msgid "Select all"
+msgstr ""
+
+#: src/window.ui:744
+msgid "Import Image..."
+msgstr ""
+
+#: src/window.ui:764
+msgid "Drawing tools"
+msgstr ""
+
+#: src/window.ui:779
+msgid "Draw"
+msgstr ""
+
+#: src/window.ui:801
+msgid "Drawing"
+msgstr ""
+
+#: src/window.ui:934
+msgid "Utilities"
+msgstr ""
+
+#: src/window.ui:994
+msgid "Color picker"
+msgstr ""
+
+#: src/window.ui:1010
+msgid "Elements"
+msgstr ""
+
+#: src/window.ui:1093
+msgid "Geometric shapes"
+msgstr ""
+
+#: src/window.ui:1108
+msgid "Shapes"
+msgstr ""
+
+#: src/window.ui:1283
+msgid "Tool options"
+msgstr ""
+
+#: src/window.ui:1298
+msgid "Options"
+msgstr ""
+
+#: src/window.ui:1343
+msgid "Primary color (left click)"
+msgstr ""
+
+#: src/window.ui:1351
+msgid "Swap colors"
+msgstr ""
+
+#: src/window.ui:1360
+msgid "Secondary color (right click)"
+msgstr ""
+
+#: src/window.ui:1376
+msgid "Brush thickness"
+msgstr ""
+
+#: src/window.ui:1449
+msgid "Move toolbar bottom/top"
+msgstr ""
+
+#: src/window.ui:1522
+msgid "Resize Image"
+msgstr ""
+
+#: src/window.ui:1535
+msgid "Unit:"
+msgstr ""
+
+#: src/window.ui:1541
+msgid "Pixels (px)"
+msgstr ""
+
+#: src/window.ui:1542
+msgid "Centimeters (cm)"
+msgstr ""
+
+#: src/window.ui:1559
+msgid "W:"
+msgstr ""
+
+#: src/window.ui:1578
+msgid "H:"
+msgstr ""
+
+#: src/window.ui:1595
+msgid "Apply"
+msgstr ""
+
+#: src/window.ui:1681
+msgid "Reset"
+msgstr ""

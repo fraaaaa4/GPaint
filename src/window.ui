@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="Adw" version="1.0"/>
+  <template class="GnomepaintWindow" parent="AdwApplicationWindow">
+    <property name="title" translatable="yes">GPaint</property>
+    <property name="default-width">900</property>
+    <property name="default-height">700</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+            <property name="title-widget">
+              <object class="GtkMenuButton" id="btn_title">
+                <style>
+                  <class name="flat"/>
+                </style>
+                <property name="child">
+                  <object class="GtkLabel" id="lbl_title">
+                    <property name="label">Untitled - GPaint</property>
+                    <style>
+                      <class name="title"/>
+                    </style>
+                  </object>
+                </property>
+                <property name="popover">
+                  <object class="GtkPopover" id="popover_rename">
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">6</property>
+                        <property name="margin-top">6</property>
+                        <property name="margin-bottom">6</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                        <child>
+                          <object class="GtkBox" id="box_rename_unsaved">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">6</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">You must save this image before renaming</property>
+                                <property name="wrap">true</property>
+                                <style>
+                                  <class name="warning"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkBox" id="box_rename_saved">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">6</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Rename File</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="GtkEntry" id="entry_rename">
+                                    <property name="placeholder-text">filename.png</property>
+                                    <property name="hexpand">true</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="btn_rename_apply">
+                                    <property name="label" translatable="yes">Rename</property>
+                                    <style>
+                                      <class name="suggested-action"/>
+                                    </style>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="margin-top">6</property>
+                                <property name="margin-bottom">6</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="lbl_rename_path">
+                                <property name="xalign">0</property>
+                                <property name="ellipsize">middle</property>
+                                <style>
+                                  <class name="dim-label"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="GtkButton" id="btn_rename_open_folder">
+                                    <property name="icon-name">folder-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Open folder</property>
+                                    <property name="hexpand">true</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton" id="btn_rename_copy_path">
+                                    <property name="icon-name">edit-copy-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Copy path</property>
+                                    <property name="hexpand">true</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+            <!-- Left Side controls -->
+            <child type="start">
+              <object class="GtkBox">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">4</property>
+                <child>
+                  <object class="GtkMenuButton" id="btn_new">
+                    <property name="tooltip-text" translatable="yes">New drawing</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="spacing">4</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">document-new-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label" translatable="yes">New</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_new">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">8</property>
+                            <property name="margin-top">8</property>
+                            <property name="margin-bottom">8</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Canvas size</property>
+                                <property name="xalign">0</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">8</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="label" translatable="yes">Width:</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="entry_width">
+                                    <property name="text">800</property>
+                                    <property name="width-request">60</property>
+                                    <property name="width-chars">5</property>
+                                    <property name="max-width-chars">6</property>
+                                    <property name="halign">start</property>
+                                    <property name="hexpand">false</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="label" translatable="yes">Height:</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="entry_height">
+                                    <property name="text">600</property>
+                                    <property name="width-request">60</property>
+                                    <property name="width-chars">5</property>
+                                    <property name="max-width-chars">6</property>
+                                    <property name="halign">start</property>
+                                    <property name="hexpand">false</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                                <property name="margin-top">4</property>
+                                <property name="margin-bottom">4</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">8</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="label" translatable="yes">Background:</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkColorDialogButton" id="btn_new_bg_color">
+                                    <property name="dialog">
+                                      <object class="GtkColorDialog"/>
+                                    </property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkCheckButton" id="chk_new_transparent">
+                                    <property name="label" translatable="yes">Transparent</property>
+                                    <property name="active">true</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_new_apply">
+                                <property name="label" translatable="yes">Create</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_new_clipboard">
+                                <property name="label" translatable="yes">New from Clipboard</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_undo">
+                    <property name="icon-name">edit-undo-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Undo</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_redo">
+                    <property name="icon-name">edit-redo-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Redo</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="btn_clear">
+                    <property name="icon-name">edit-clear</property>
+                    <property name="tooltip-text" translatable="yes">Clear canvas</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <!-- Right Side controls -->
+            <child type="end">
+              <object class="GtkMenuButton" id="btn_menu_primary">
+                <property name="icon-name">open-menu-symbolic</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+                <property name="popover">
+                  <object class="GtkPopover" id="popover_primary">
+                    <style>
+                      <class name="primary-popover"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="spacing">8</property>
+                        <property name="margin-top">8</property>
+                        <property name="margin-bottom">8</property>
+                        <property name="margin-start">8</property>
+                        <property name="margin-end">8</property>
+                        <!-- Theme selector box -->
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">horizontal</property>
+                            <property name="halign">center</property>
+                            <property name="spacing">12</property>
+                            <child>
+                              <object class="GtkButton" id="theme_btn_system">
+                                <property name="tooltip-text" translatable="yes">System theme</property>
+                                <style>
+                                  <class name="circular"/>
+                                </style>
+                                <child>
+                                  <object class="GtkImage" id="theme_img_system">
+                                    <property name="icon-name">theme-auto</property>
+                                    <property name="pixel-size">32</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="theme_btn_light">
+                                <property name="tooltip-text" translatable="yes">Light theme</property>
+                                <style>
+                                  <class name="circular"/>
+                                </style>
+                                <child>
+                                  <object class="GtkImage" id="theme_img_light">
+                                    <property name="icon-name">theme-light</property>
+                                    <property name="pixel-size">32</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="theme_btn_dark">
+                                <property name="tooltip-text" translatable="yes">Dark theme</property>
+                                <style>
+                                  <class name="circular"/>
+                                </style>
+                                <child>
+                                  <object class="GtkImage" id="theme_img_dark">
+                                    <property name="icon-name">theme-dark</property>
+                                    <property name="pixel-size">32</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="orientation">horizontal</property>
+                          </object>
+                        </child>
+                        <!-- List of items -->
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">2</property>
+                            <child>
+                              <object class="GtkCheckButton" id="chk_show_labels">
+                                <property name="label" translatable="yes">Show Tool Labels</property>
+                                <property name="active">true</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkCheckButton" id="chk_center_canvas">
+                                <property name="label" translatable="yes">Center Canvas</property>
+                                <property name="active">false</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkCheckButton" id="chk_status_bar">
+                                <property name="label" translatable="yes">Show Status Bar</property>
+                                <property name="active">true</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkCheckButton" id="chk_show_grid">
+                                <property name="label" translatable="yes">Show Grid</property>
+                                <property name="active">false</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkCheckButton" id="chk_pixel_view">
+                                <property name="label" translatable="yes">Pixel View</property>
+                                <property name="active">false</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <!-- Image Properties -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_properties">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Image Properties</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <!-- Print -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_print">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Print...</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Ctrl+P</property>
+                                        <style>
+                                          <class name="dim-label"/>
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <!-- Preferences -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_preferences">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Preferences</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <!-- Open With -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_share">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Open With...</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <!-- Save As... -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_save_as">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Save As...</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <!-- New Window -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_new_window">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">New Window</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Ctrl+N</property>
+                                        <style>
+                                          <class name="dim-label"/>
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <!-- Keyboard Shortcuts -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_shortcuts">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Keyboard Shortcuts</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Ctrl+?</property>
+                                        <style>
+                                          <class name="dim-label"/>
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <!-- About -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_about">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">About GPaint</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <!-- Close (Chiudi) -->
+                            <child>
+                              <object class="GtkButton" id="menu_btn_close">
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">20</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">Close</property>
+                                        <property name="hexpand">true</property>
+                                        <property name="xalign">0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Ctrl+Q</property>
+                                        <style>
+                                          <class name="dim-label"/>
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkButton" id="btn_save">
+                <property name="icon-name">document-save-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Save (Ctrl+S)</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkButton" id="btn_open">
+                <property name="icon-name">document-open-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Open Image (Ctrl+O)</property>
+                <style>
+                  <class name="flat"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkBox" id="main_layout">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkBox" id="toolbar_box">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">6</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="margin-start">6</property>
+                <property name="margin-end">6</property>
+                <!-- Selection menu button -->
+                <child>
+                  <object class="GtkMenuButton" id="btn_selection">
+                    <property name="tooltip-text" translatable="yes">Selection</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkImage" id="img_selection">
+                            <property name="icon-name">tool-select-rect-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_toolbar_selection">
+                            <property name="label" translatable="yes">Selection</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_selection">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">4</property>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_select_rect">
+                                <property name="label" translatable="yes">Rectangular selection</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_select_free">
+                                <property name="label" translatable="yes">Free selection</property>
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_select_all">
+                                <property name="label" translatable="yes">Select all</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_import">
+                                <property name="label" translatable="yes">Import Image...</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <!-- Paint menu button -->
+                <child>
+                  <object class="GtkMenuButton" id="btn_paint">
+                    <property name="tooltip-text" translatable="yes">Drawing tools</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkImage" id="img_paint">
+                            <property name="icon-name">tool-brush-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_toolbar_paint">
+                            <property name="label" translatable="yes">Draw</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_paint">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">4</property>
+                            <property name="margin-top">8</property>
+                            <property name="margin-bottom">8</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Drawing</property>
+                                <property name="xalign">0</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkGrid">
+                                <property name="row-spacing">4</property>
+                                <property name="column-spacing">4</property>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_brush">
+                                    <property name="active">true</property>
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">0</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">tool-brush-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_brush">
+                                            <property name="label" translatable="yes">Brush</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_pencil">
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">1</property>
+                                      <property name="row">0</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">tool-pencil-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_pencil">
+                                            <property name="label" translatable="yes">Pencil</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_highlight">
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">1</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">tool-highlight-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_highlight">
+                                            <property name="label" translatable="yes">Highlighter</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_eraser">
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">1</property>
+                                      <property name="row">1</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">tool-eraser-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_eraser">
+                                            <property name="label" translatable="yes">Eraser</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Utilities</property>
+                                <property name="xalign">0</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkGrid">
+                                <property name="row-spacing">4</property>
+                                <property name="column-spacing">4</property>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_bucket">
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">0</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">tool-paint-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_bucket">
+                                            <property name="label" translatable="yes">Fill</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_picker">
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">1</property>
+                                      <property name="row">0</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">color-select-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_picker">
+                                            <property name="label" translatable="yes">Color picker</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSeparator">
+                                <property name="orientation">horizontal</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Elements</property>
+                                <property name="xalign">0</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkGrid">
+                                <property name="row-spacing">4</property>
+                                <property name="column-spacing">4</property>
+                                <child>
+                                  <object class="GtkToggleButton" id="tool_text">
+                                    <property name="group">tool_select_rect</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">0</property>
+                                    </layout>
+                                    <child>
+                                      <object class="GtkBox">
+                                        <property name="orientation">horizontal</property>
+                                        <property name="spacing">6</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">tool-text-symbolic</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="lbl_tool_text">
+                                            <property name="label" translatable="yes">Text</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <!-- Shapes menu button -->
+                <child>
+                  <object class="GtkMenuButton" id="btn_shapes">
+                    <property name="tooltip-text" translatable="yes">Geometric shapes</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkImage" id="img_shapes">
+                            <property name="icon-name">tool-line-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_toolbar_shapes">
+                            <property name="label" translatable="yes">Shapes</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_shapes">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">4</property>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_line">
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">tool-line-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="lbl_tool_line">
+                                        <property name="label" translatable="yes">Line</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_rect">
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">tool-rectangle-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="lbl_tool_rect">
+                                        <property name="label" translatable="yes">Rectangle</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+
+                            <child>
+                              <object class="GtkToggleButton" id="tool_oval">
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">tool-oval-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="lbl_tool_oval">
+                                        <property name="label" translatable="yes">Oval</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_circle">
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">tool-circle-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="lbl_tool_circle">
+                                        <property name="label" translatable="yes">Circle</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_polygon">
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">tool-polygon-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="lbl_tool_polygon">
+                                        <property name="label" translatable="yes">Polygon</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkToggleButton" id="tool_freeshape">
+                                <property name="group">tool_select_rect</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">tool-freeshape-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="lbl_tool_freeshape">
+                                        <property name="label" translatable="yes">Closed freehand</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <!-- Options menu button -->
+                <child>
+                  <object class="GtkMenuButton" id="btn_options">
+                    <property name="tooltip-text" translatable="yes">Tool options</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">emblem-system-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_toolbar_options">
+                            <property name="label" translatable="yes">Options</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_options">
+                        <property name="autohide">true</property>
+                        <child>
+                          <object class="GtkBox" id="box_options">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">8</property>
+                            <property name="margin-top">8</property>
+                            <property name="margin-bottom">8</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <!-- Spacer to push next widgets to the right -->
+                <child>
+                  <object class="GtkBox">
+                    <property name="hexpand">true</property>
+                  </object>
+                </child>
+                <!-- Primary and Secondary Colors -->
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">horizontal</property>
+                    <property name="spacing">4</property>
+                    <child>
+                      <object class="GtkColorDialogButton" id="color_button">
+                        <property name="tooltip-text" translatable="yes">Primary color (left click)</property>
+                        <property name="dialog">
+                          <object class="GtkColorDialog"/>
+                        </property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="btn_swap_colors">
+                        <property name="tooltip-text" translatable="yes">Swap colors</property>
+                        <property name="icon-name">exchange-colors-symbolic</property>
+                        <style>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkColorDialogButton" id="color_button_secondary">
+                        <property name="tooltip-text" translatable="yes">Secondary color (right click)</property>
+                        <property name="dialog">
+                          <object class="GtkColorDialog"/>
+                        </property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <!-- Thickness/Spessore menu button -->
+                <child>
+                  <object class="GtkMenuButton" id="btn_thickness">
+                    <property name="tooltip-text" translatable="yes">Brush thickness</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="orientation">horizontal</property>
+                        <property name="spacing">6</property>
+                        <child>
+                          <object class="GtkImage" id="img_thickness">
+                            <property name="icon-name">size-3-symbolic</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="lbl_toolbar_thickness">
+                            <property name="label" translatable="yes">Thickness</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="icon-name">go-down-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_thickness">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">6</property>
+                            <property name="margin-top">8</property>
+                            <property name="margin-bottom">8</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                            <child>
+                              <object class="GtkLabel" id="lbl_brush_size_title">
+                                <property name="label" translatable="yes">Brush size</property>
+                                <property name="xalign">0</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkScale" id="brush_size_scale">
+                                <property name="width-request">150</property>
+                                <property name="adjustment">
+                                  <object class="GtkAdjustment">
+                                    <property name="lower">1</property>
+                                    <property name="upper">50</property>
+                                    <property name="value">5</property>
+                                    <property name="step-increment">1</property>
+                                  </object>
+                                </property>
+                                <property name="draw-value">true</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <!-- Position toggle button to move the toolbar to bottom -->
+                <child>
+                  <object class="GtkButton" id="btn_toggle_position">
+                    <property name="icon-name">go-down-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Move toolbar bottom/top</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <!-- Scrolled drawing area content -->
+            <child>
+              <object class="GtkScrolledWindow" id="scrolled_window">
+                <property name="hscrollbar-policy">always</property>
+                <property name="vscrollbar-policy">always</property>
+                <property name="vexpand">true</property>
+                <property name="hexpand">true</property>
+                <property name="focus-on-click">false</property>
+                <child>
+                  <object class="GtkOverlay" id="canvas_overlay">
+                    <child>
+                      <object class="GtkDrawingArea" id="drawing_area">
+                        <property name="focusable">true</property>
+                        <property name="width-request">800</property>
+                        <property name="height-request">600</property>
+                        <style>
+                          <class name="paint-canvas"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <!-- Status bar at the bottom -->
+            <child>
+              <object class="GtkBox" id="status_bar">
+                <property name="orientation">horizontal</property>
+                <property name="spacing">12</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
+                <property name="margin-start">12</property>
+                <property name="margin-end">12</property>
+                <child>
+                  <object class="GtkLabel" id="lbl_status_coords">
+                    <property name="label">-, - px</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkMenuButton" id="btn_status_dims">
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <property name="child">
+                      <object class="GtkLabel" id="lbl_status_dims">
+                        <property name="label">800 x 600 px</property>
+                      </object>
+                    </property>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_dims">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">vertical</property>
+                            <property name="spacing">8</property>
+                            <property name="margin-top">8</property>
+                            <property name="margin-bottom">8</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Resize Image</property>
+                                <property name="xalign">0</property>
+                                <style>
+                                  <class name="heading"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">6</property>
+                                <child>
+                                  <object class="GtkLabel">
+                                    <property name="label" translatable="yes">Unit:</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkComboBoxText" id="combo_dims_unit">
+                                    <items>
+                                      <item id="px" translatable="yes">Pixels (px)</item>
+                                      <item id="cm" translatable="yes">Centimeters (cm)</item>
+                                    </items>
+                                    <property name="active-id">px</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="orientation">horizontal</property>
+                                <property name="spacing">12</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">W:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="entry_dims_width">
+                                        <property name="text">800</property>
+                                        <property name="width-request">50</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="max-width-chars">5</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="orientation">horizontal</property>
+                                    <property name="spacing">6</property>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label" translatable="yes">H:</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkEntry" id="entry_dims_height">
+                                        <property name="text">600</property>
+                                        <property name="width-request">50</property>
+                                        <property name="width-chars">4</property>
+                                        <property name="max-width-chars">5</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_dims_apply">
+                                <property name="label" translatable="yes">Apply</property>
+                                <style>
+                                  <class name="suggested-action"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <!-- Spacer to push zoom to the right -->
+                <child>
+                  <object class="GtkBox">
+                    <property name="hexpand">true</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkSeparator">
+                    <property name="orientation">vertical</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkMenuButton" id="btn_status_zoom">
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                    <property name="child">
+                      <object class="GtkLabel" id="lbl_status_zoom">
+                        <property name="label">100%</property>
+                        <property name="width-request">50</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                    </property>
+                    <property name="popover">
+                      <object class="GtkPopover" id="popover_zoom">
+                        <child>
+                          <object class="GtkBox">
+                            <property name="orientation">horizontal</property>
+                            <property name="spacing">8</property>
+                            <property name="margin-top">6</property>
+                            <property name="margin-bottom">6</property>
+                            <property name="margin-start">8</property>
+                            <property name="margin-end">8</property>
+                            <child>
+                              <object class="GtkButton" id="btn_zoom_out">
+                                <property name="icon-name">zoom-out-symbolic</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkScale" id="scale_zoom">
+                                <property name="orientation">horizontal</property>
+                                <property name="adjustment">
+                                  <object class="GtkAdjustment">
+                                    <property name="lower">0.1</property>
+                                    <property name="upper">20.0</property>
+                                    <property name="value">1.0</property>
+                                    <property name="step-increment">0.1</property>
+                                    <property name="page-increment">0.5</property>
+                                  </object>
+                                </property>
+                                <property name="draw-value">false</property>
+                                <property name="width-request">150</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_zoom_in">
+                                <property name="icon-name">zoom-in-symbolic</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkEntry" id="entry_zoom_value">
+                                <property name="width-request">42</property>
+                                <property name="max-width-chars">5</property>
+                                <property name="xalign">0.5</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="btn_zoom_reset">
+                                <property name="label" translatable="yes">Reset</property>
+                                <style>
+                                  <class name="flat"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </template>
+</interface>

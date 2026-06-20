@@ -1,0 +1,43 @@
+{
+    "app-id": "org.fratta.gpaint",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "50",
+    "sdk": "org.gnome.Sdk",
+    "command": "org.fratta.gpaint",
+    "project-license": "GPL-3.0-or-later",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--device=dri",
+        "--talk-name=org.freedesktop.portal.Desktop",
+    	"--talk-name=org.freedesktop.portal.Flatpak"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/man",
+        "/share/doc",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.la",
+        "*.a"
+    ],
+    "modules": [
+        {
+            "name": "gpaint",
+            "builddir": true,
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": "."
+                }
+            ],
+            "config-opts": [
+                "--libdir=lib"
+            ]
+        }
+    ]
+}

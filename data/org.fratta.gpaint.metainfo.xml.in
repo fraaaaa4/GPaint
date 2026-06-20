@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.fratta.gpaint</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <name>GPaint</name>
+  <summary>Paint made for Libadwaita and GTK4</summary>
+  <description>
+    <p>Simple drawing program for Gnome. Whether you're drawing just for fun, or need something quick to ink down your ideas, GPaint can do it with a familiar yet modern interface. Built with Libadwaita, it integrates perfectly with the modern Gnome look. It has many tools (each one of them has additional options), shapes, importing images, grid and pixel view, printing support, and transparency support.</p>
+  </description>
+
+  <developer id="io.github.fraaaaa4">
+    <name>fratta</name>
+  </developer>
+
+  <url type="homepage">https://github.com/fraaaaa4/GPaint</url>
+  <url type="vcs-browser">https://github.com/fraaaaa4/GPaint</url>
+  <url type="bugtracker">https://github.com/fraaaaa4/GPaint/issues</url>
+
+  <translation type="gettext">gpaint</translation>
+  <launchable type="desktop-id">org.fratta.gpaint.desktop</launchable>
+  <content_rating type="oars-1.1" />
+
+  <branding>
+    <color type="primary" scheme_preference="light">#ff00ff</color>
+    <color type="primary" scheme_preference="dark">#993d3d</color>
+  </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://github.com/fraaaaa4/GPaint/blob/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/1.png</image>
+      <caption>Drawing on the canvas</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/fraaaaa4/GPaint/blob/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/2.png</image>
+      <caption>Drawing on images</caption>
+    </screenshot>
+    <screenshot>
+      <image>https://github.com/fraaaaa4/GPaint/blob/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/3.png</image>
+      <caption>Shapes and stuff</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0.0" date="2024-01-18">
+      <description translate="no">
+        <p>Initial release of GPaint.</p>
+        <ul>
+          <li>Familiar drawing interface with modern GTK4 design</li>
+          <li>Support for layers and transparency</li>
+          <li>Various shapes, brushes, and selection tools</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+
+</component>

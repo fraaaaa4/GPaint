@@ -1,0 +1,10 @@
+[Icon Theme]
+Name=GnomePaint
+Comment=GnomePaint Custom Icons
+Directories=scalable/actions
+
+[scalable/actions]
+Size=16
+MinSize=8
+MaxSize=512
+Type=Scalable

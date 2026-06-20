@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/fratta/gpaint">
+    <file preprocess="xml-stripblanks">window.ui</file>
+    <file preprocess="xml-stripblanks">shortcuts-dialog.ui</file>
+    <file>icons/index.theme</file>
+    <file>icons/scalable/actions/brush-horizontal-symbolic.svg</file>
+    <file>icons/scalable/actions/brush-left-symbolic.svg</file>
+    <file>icons/scalable/actions/brush-right-symbolic.svg</file>
+    <file>icons/scalable/actions/brush-vertical-symbolic.svg</file>
+    <file>icons/scalable/actions/dash-alt-symbolic.svg</file>
+    <file>icons/scalable/actions/dash-dots-symbolic.svg</file>
+    <file>icons/scalable/actions/dash-long-symbolic.svg</file>
+    <file>icons/scalable/actions/dash-none-symbolic.svg</file>
+    <file>icons/scalable/actions/dash-regular-symbolic.svg</file>
+    <file>icons/scalable/actions/document-new-symbolic.svg</file>
+    <file>icons/scalable/actions/document-save-symbolic.svg</file>
+    <file>icons/scalable/actions/edit-redo-symbolic.svg</file>
+    <file>icons/scalable/actions/edit-undo-symbolic.svg</file>
+    <file>icons/scalable/actions/exchange-colors-symbolic.svg</file>
+    <file>icons/scalable/actions/gesture-three-fingers-touch.svg</file>
+    <file>icons/scalable/actions/object-flip-horizontal-symbolic.svg</file>
+    <file>icons/scalable/actions/object-flip-vertical-symbolic.svg</file>
+    <file>icons/scalable/actions/object-rotate-left-symbolic.svg</file>
+    <file>icons/scalable/actions/object-rotate-right-symbolic.svg</file>
+    <file>icons/scalable/actions/size-1-symbolic.svg</file>
+    <file>icons/scalable/actions/size-3-symbolic.svg</file>
+    <file>icons/scalable/actions/size-5-symbolic.svg</file>
+    <file>icons/scalable/actions/size-7-symbolic.svg</file>
+    <file>icons/scalable/actions/size-8-symbolic.svg</file>
+    <file>icons/scalable/actions/size-9-symbolic.svg</file>
+    <file>icons/scalable/actions/theme-auto-selected.svg</file>
+    <file>icons/scalable/actions/theme-auto.svg</file>
+    <file>icons/scalable/actions/theme-dark-selected.svg</file>
+    <file>icons/scalable/actions/theme-dark.svg</file>
+    <file>icons/scalable/actions/theme-light-selected.svg</file>
+    <file>icons/scalable/actions/theme-light.svg</file>
+    <file>icons/scalable/actions/tool-arc-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-brush-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-censor-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-circle-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-crop-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-eraser-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-filters-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-freeshape-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-highlight-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-line-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-magic-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-oval-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-paint-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-pencil-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-points-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-polygon-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-rectangle-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-rotate-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-roundedrect-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-scale-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-select-free-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-select-rect-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-skew-symbolic.svg</file>
+    <file>icons/scalable/actions/tool-text-symbolic.svg</file>
+    <file>icons/scalable/actions/unit-degrees-symbolic.svg</file>
+    <file>icons/scalable/actions/unit-percents-symbolic.svg</file>
+    <file>icons/scalable/actions/unit-pixels-symbolic.svg</file>
+  </gresource>
+</gresources>

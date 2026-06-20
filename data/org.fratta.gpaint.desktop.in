@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GPaint
+Comment=Simple drawing program for Gnome
+Exec=org.fratta.gpaint
+Icon=org.fratta.gpaint
+Terminal=false
+Type=Application
+Categories=Graphics;2DGraphics;RasterGraphics;
+Keywords=Paint;Draw;Graphics;GTK;
+StartupNotify=true
+DBusActivatable=true

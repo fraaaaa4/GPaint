@@ -1,0 +1,36 @@
+#!@GJS@ -m
+
+import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
+import { exit, programArgs, programInvocationName } from 'system';
+
+const ENTRY_POINT = '@entry_point@';
+
+imports.package.init({
+  name: '@PACKAGE_NAME@',
+  version: '@PACKAGE_VERSION@',
+  prefix: '@prefix@',
+  libdir: '@libdir@',
+  datadir: '@datadir@',
+});
+
+function loadResources() {
+  let resourceDir = pkg.pkgdatadir;
+  if (pkg._runningFromMesonSource()) {
+    resourceDir = GLib.build_filenamev([GLib.getenv('MESON_BUILD_ROOT'), 'src']);
+  } else {
+    const localDir = GLib.path_get_dirname(programInvocationName);
+    const localBundle = Gio.File.new_for_path(`${localDir}/${ENTRY_POINT}.src.gresource`);
+    if (localBundle.query_exists(null))
+      resourceDir = localDir;
+  }
+
+  Gio.Resource.load(`${resourceDir}/${ENTRY_POINT}.src.gresource`)._register();
+  Gio.Resource.load(`${resourceDir}/${ENTRY_POINT}.data.gresource`)._register();
+}
+
+loadResources();
+
+const { main } = await import('resource://@resource_path@/js/main.js');
+const exit_code = await main([programInvocationName, ...programArgs]);
+exit(exit_code);

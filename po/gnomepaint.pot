@@ -1,0 +1,693 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"#-#-#-#-#  gnomepaint.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 18:42+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"#-#-#-#-#  ui.pot (PACKAGE VERSION)  #-#-#-#-#\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 18:41+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.js:53
+msgid "GnomePaint"
+msgstr ""
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.js:61
+msgid "translator-credits"
+msgstr ""
+
+#: src/window.js:225 src/window.ui:2
+msgid "Text"
+msgstr ""
+
+#: src/window.js:2450
+msgid "Save drawing"
+msgstr ""
+
+#: src/window.js:2526
+msgid "Save drawing as"
+msgstr ""
+
+#: src/window.js:2548
+msgid "Open image"
+msgstr ""
+
+#: src/window.js:3049
+msgid "Text options"
+msgstr ""
+
+#: src/window.js:3186
+msgid "Transform"
+msgstr ""
+
+#: src/window.js:3373 src/window.js:3400
+msgid "Save changes?"
+msgstr ""
+
+#: src/window.js:3374
+msgid ""
+"Your drawing has unsaved changes. Do you want to save them before continuing?"
+msgstr ""
+
+#: src/window.js:3377 src/window.js:3404
+msgid "Cancel"
+msgstr ""
+
+#: src/window.js:3378 src/window.js:3405
+msgid "Discard"
+msgstr ""
+
+#: src/window.js:3379 src/window.js:3406
+msgid "Save"
+msgstr ""
+
+#: src/window.js:3401
+msgid ""
+"Your drawing has unsaved changes. Do you want to save them before closing?"
+msgstr ""
+
+#: src/window.js:3502
+msgid "Import Image"
+msgstr ""
+
+#: src/window.js:3579 src/window.js:3587 src/window.ui:2
+msgid "Image Properties"
+msgstr ""
+
+#: src/window.js:3598
+msgid "Image"
+msgstr ""
+
+#: src/window.js:3600
+msgid "Dimensions"
+msgstr ""
+
+#: src/window.js:3604
+msgid "Color mode"
+msgstr ""
+
+#: src/window.js:3605
+msgid "ARGB32 (with alpha channel)"
+msgstr ""
+
+#: src/window.js:3608
+msgid "Zoom level"
+msgstr ""
+
+#: src/window.js:3612
+msgid "Total pixels"
+msgstr ""
+
+#: src/window.js:3617
+msgid "File"
+msgstr ""
+
+#: src/window.js:3618 src/window.js:3849 src/window.js:3858 src/window.js:3873
+msgid "Untitled"
+msgstr ""
+
+#: src/window.js:3620
+msgid "Name"
+msgstr ""
+
+#: src/window.js:3624
+msgid "Not saved yet"
+msgstr ""
+
+#: src/window.js:3625 src/window.js:3678 src/window.js:3682
+msgid "Yes"
+msgstr ""
+
+#: src/window.js:3625 src/window.js:3678 src/window.js:3682
+msgid "No"
+msgstr ""
+
+#: src/window.js:3626
+msgid "PNG (default)"
+msgstr ""
+
+#: src/window.js:3645
+msgid "Size"
+msgstr ""
+
+#: src/window.js:3649
+msgid "Format"
+msgstr ""
+
+#: src/window.js:3653
+msgid "Last modified"
+msgstr ""
+
+#: src/window.js:3657
+msgid "Folder"
+msgstr ""
+
+#: src/window.js:3662
+msgid "Full path"
+msgstr ""
+
+#: src/window.js:3668
+msgid "Canvas"
+msgstr ""
+
+#: src/window.js:3670 src/window.ui:2
+msgid "Transparent"
+msgstr ""
+
+#: src/window.js:3671
+msgid "Custom color"
+msgstr ""
+
+#: src/window.js:3671
+msgid "White"
+msgstr ""
+
+#: src/window.js:3673
+msgid "Background"
+msgstr ""
+
+#: src/window.js:3677
+msgid "Show grid"
+msgstr ""
+
+#: src/window.js:3681
+msgid "Pixel view"
+msgstr ""
+
+#: src/window.js:3717
+msgid "Copy"
+msgstr ""
+
+#: src/window.js:3718
+msgid "Cut"
+msgstr ""
+
+#: src/window.js:3719
+msgid "Paste"
+msgstr ""
+
+#: src/window.js:3720
+msgid "Delete"
+msgstr ""
+
+#: src/window.js:3721
+msgid "Invert selection colors"
+msgstr ""
+
+#: src/window.js:3822
+msgid "Not saved"
+msgstr ""
+
+#: src/window.js:4030 src/window.ui:2
+msgid "Preferences"
+msgstr ""
+
+#: src/window.js:4035 src/shortcuts-dialog.ui:6
+msgid "General"
+msgstr ""
+
+#: data/org.gnome.gpaint.desktop.in:2 data/org.gnome.gpaint.metainfo.xml.in:7
+#: src/window.ui:2
+msgid "GPaint"
+msgstr ""
+
+#: data/org.gnome.gpaint.desktop.in:8
+msgid "GTK;"
+msgstr ""
+
+#: data/org.gnome.gpaint.metainfo.xml.in:8
+msgid "Keep the summary shorter, between 10 and 35 characters"
+msgstr ""
+
+#: data/org.gnome.gpaint.metainfo.xml.in:10
+msgid "No description"
+msgstr ""
+
+#: data/org.gnome.gpaint.metainfo.xml.in:14
+msgid "Developer name"
+msgstr ""
+
+#: data/org.gnome.gpaint.metainfo.xml.in:52
+#: data/org.gnome.gpaint.metainfo.xml.in:56
+msgid "A caption"
+msgstr ""
+
+#: src/window.ui:2
+msgid "You must save this image before renaming"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Rename File"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Rename"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Open folder"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Copy path"
+msgstr ""
+
+#: src/window.ui:2
+msgid "New drawing"
+msgstr ""
+
+#: src/window.ui:2
+msgid "New"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Canvas size"
+msgstr ""
+
+#: src/window.ui:2
+msgid "W:"
+msgstr ""
+
+#: src/window.ui:2
+msgid "H:"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Background:"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Create"
+msgstr ""
+
+#: src/window.ui:2
+msgid "New from Clipboard"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Undo"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Redo"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Clear canvas"
+msgstr ""
+
+#: src/window.ui:2
+msgid "System theme"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Light theme"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Dark theme"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Show Tool Labels"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Center Canvas"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Show Status Bar"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Show Grid"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Pixel View"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Print..."
+msgstr ""
+
+#: src/window.ui:2
+msgid "Save As..."
+msgstr ""
+
+#: src/window.ui:2
+msgid "New Window"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/window.ui:2
+msgid "About GnomePaint"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Close"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Save (Ctrl+S)"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Open Image (Ctrl+O)"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Selection"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Rectangular selection"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Free selection"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Select all"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Import Image..."
+msgstr ""
+
+#: src/window.ui:2
+msgid "Drawing tools"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Draw"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Drawing"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Brush"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Pencil"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Highlighter"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Eraser"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Utilities"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Fill"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Color picker"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Elements"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Points"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Geometric shapes"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Shapes"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Line"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Rectangle"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Rounded rectangle"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Oval"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Circle"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Polygon"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Closed freehand"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Tool options"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Options"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Primary color (left click)"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Swap colors"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Secondary color (right click)"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Brush thickness"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Thickness"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Brush size"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Move toolbar bottom/top"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Resize Image"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Unit:"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Pixels (px)"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Centimeters (cm)"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Apply"
+msgstr ""
+
+#: src/window.ui:2
+msgid "Reset"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:9
+msgctxt "shortcut window"
+msgid "New"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:15
+msgctxt "shortcut window"
+msgid "Open"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:21
+msgctxt "shortcut window"
+msgid "Save"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:27
+msgctxt "shortcut window"
+msgid "Print"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:33
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:39
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:53
+msgid "Edit"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:56
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:62
+msgctxt "shortcut window"
+msgid "Cut"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:68
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:74
+msgctxt "shortcut window"
+msgid "Delete selection"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:82
+msgid "View"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:85
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:91
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:97
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:103
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:111
+msgid "Tools"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:114
+msgctxt "shortcut window"
+msgid "Brush"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:120
+msgctxt "shortcut window"
+msgid "Pencil"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:126
+msgctxt "shortcut window"
+msgid "Eraser"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:132
+msgctxt "shortcut window"
+msgid "Color picker"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:138
+msgctxt "shortcut window"
+msgid "Fill"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:144
+msgctxt "shortcut window"
+msgid "Selection"
+msgstr ""
+
+#: src/shortcuts-dialog.ui:150
+msgctxt "shortcut window"
+msgid "Text"
+msgstr ""
+
+#: src/window.js:218
+msgid "Clear Canvas?"
+msgstr ""
+
+#: src/window.js:219
+msgid "Are you sure you want to clear the entire image? This action can be undone."
+msgstr ""
+
+#: src/window.js:223
+msgid "Clear All"
+msgstr ""
+
+#: src/preferences.js:95
+msgid "Confirmations"
+msgstr ""
+
+#: src/preferences.js:96
+msgid "Show or hide confirmation dialogs before doing operations"
+msgstr ""
+
+#: src/preferences.js:101
+msgid "Ask for confirmation before clearing the canvas"
+msgstr ""

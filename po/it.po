@@ -1,0 +1,944 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gnomepaint 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-15 18:42+0200\n"
+"PO-Revision-Date: 2026-06-15 18:42+0200\n"
+"Last-Translator: fratta\n"
+"Language-Team: Italian\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+#: src/main.js:53
+msgid "GnomePaint"
+msgstr "GnomePaint"
+
+#: src/window.js:225 src/window.ui:2
+msgid "Text"
+msgstr "Testo"
+
+#: src/window.js:2450
+msgid "Save drawing"
+msgstr "Salva disegno"
+
+#: src/window.js:2526
+msgid "Save drawing as"
+msgstr "Salva disegno con nome"
+
+#: src/window.js:2548
+msgid "Open image"
+msgstr "Apri immagine"
+
+#: src/window.js:3049
+msgid "Text options"
+msgstr "Opzioni testo"
+
+#: src/window.js:3186
+msgid "Transform"
+msgstr "Trasforma"
+
+#: src/window.js:3373 src/window.js:3400
+msgid "Save changes?"
+msgstr "Salvare le modifiche?"
+
+#: src/window.js:3374
+msgid ""
+"Your drawing has unsaved changes. Do you want to save them before continuing?"
+msgstr "Il disegno contiene modifiche non salvate. Vuoi salvarle prima di continuare?"
+
+#: src/window.js:3377 src/window.js:3404
+msgid "Cancel"
+msgstr "Annulla"
+
+#: src/window.js:3378 src/window.js:3405
+msgid "Discard"
+msgstr "Scarta"
+
+#: src/window.js:3379 src/window.js:3406
+msgid "Save"
+msgstr "Salva"
+
+#: src/window.js:3401
+msgid ""
+"Your drawing has unsaved changes. Do you want to save them before closing?"
+msgstr "Il disegno contiene modifiche non salvate. Vuoi salvarle prima di chiudere?"
+
+#: src/window.js:3502
+msgid "Import Image"
+msgstr "Importa immagine"
+
+#: src/window.js:3579 src/window.js:3587 src/window.ui:2
+msgid "Image Properties"
+msgstr "Proprietà immagine"
+
+#: src/window.js:3598
+msgid "Image"
+msgstr "Immagine"
+
+#: src/window.js:3600
+msgid "Dimensions"
+msgstr "Dimensioni"
+
+#: src/window.js:3604
+msgid "Color mode"
+msgstr "Modalità colore"
+
+#: src/window.js:3605
+msgid "ARGB32 (with alpha channel)"
+msgstr "ARGB32 (con canale alfa)"
+
+#: src/window.js:3608
+msgid "Zoom level"
+msgstr "Livello zoom"
+
+#: src/window.js:3612
+msgid "Total pixels"
+msgstr "Pixel totali"
+
+#: src/window.js:3617
+msgid "File"
+msgstr "File"
+
+#: src/window.js:3618 src/window.js:3849 src/window.js:3858 src/window.js:3873
+msgid "Untitled"
+msgstr "Senza titolo"
+
+#: src/window.js:3620
+msgid "Name"
+msgstr "Nome"
+
+#: src/window.js:3624
+msgid "Not saved yet"
+msgstr "Non ancora salvato"
+
+#: src/window.js:3625 src/window.js:3678 src/window.js:3682
+msgid "Yes"
+msgstr "Sì"
+
+#: src/window.js:3625 src/window.js:3678 src/window.js:3682
+msgid "No"
+msgstr "No"
+
+#: src/window.js:3626
+msgid "PNG (default)"
+msgstr "PNG (predefinito)"
+
+#: src/window.js:3645
+msgid "Size"
+msgstr "Dimensione"
+
+#: src/window.js:3649
+msgid "Format"
+msgstr "Formato"
+
+#: src/window.js:3653
+msgid "Last modified"
+msgstr "Ultima modifica"
+
+#: src/window.js:3657
+msgid "Folder"
+msgstr "Cartella"
+
+#: src/window.js:3662
+msgid "Full path"
+msgstr "Percorso completo"
+
+#: src/window.js:3668
+msgid "Canvas"
+msgstr "Area di disegno"
+
+#: src/window.js:3670 src/window.ui:2
+msgid "Transparent"
+msgstr "Trasparente"
+
+#: src/window.js:3671
+msgid "Custom color"
+msgstr "Colore personalizzato"
+
+#: src/window.js:3671
+msgid "White"
+msgstr "Bianco"
+
+#: src/window.js:3673
+msgid "Background"
+msgstr "Sfondo"
+
+#: src/window.js:3677
+msgid "Show grid"
+msgstr "Mostra griglia"
+
+#: src/window.js:3681
+msgid "Pixel view"
+msgstr "Visualizzazione pixel"
+
+#: src/window.js:3717
+msgid "Copy"
+msgstr "Copia"
+
+#: src/window.js:3718
+msgid "Cut"
+msgstr "Taglia"
+
+#: src/window.js:3719
+msgid "Paste"
+msgstr "Incolla"
+
+#: src/window.js:3720
+msgid "Delete"
+msgstr "Elimina"
+
+#: src/window.js:3721
+msgid "Invert selection colors"
+msgstr "Inverti colori selezione"
+
+#: src/window.js:3822
+msgid "Not saved"
+msgstr "Non salvato"
+
+#: src/window.js:4030 src/window.ui:2
+msgid "Preferences"
+msgstr "Preferenze"
+
+#: src/window.js:4035 src/shortcuts-dialog.ui:6
+msgid "General"
+msgstr "Generale"
+
+#: data/org.gnome.gpaint.desktop.in:2 data/org.gnome.gpaint.metainfo.xml.in:7
+#: src/window.ui:2
+msgid "GPaint"
+msgstr "GPaint"
+
+#: data/org.gnome.gpaint.desktop.in:8
+msgid "GTK;"
+msgstr "GTK;"
+
+#: data/org.gnome.gpaint.metainfo.xml.in:8
+msgid "Keep the summary shorter, between 10 and 35 characters"
+msgstr "Keep the summary shorter, between 10 and 35 characters"
+
+#: data/org.gnome.gpaint.metainfo.xml.in:10
+msgid "No description"
+msgstr "No description"
+
+#: data/org.gnome.gpaint.metainfo.xml.in:14
+msgid "Developer name"
+msgstr "Developer name"
+
+#: data/org.gnome.gpaint.metainfo.xml.in:52
+#: data/org.gnome.gpaint.metainfo.xml.in:56
+msgid "A caption"
+msgstr "A caption"
+
+#: src/window.ui:2
+msgid "You must save this image before renaming"
+msgstr "Devi salvare l'immagine prima di rinominarla"
+
+#: src/window.ui:2
+msgid "Rename File"
+msgstr "Rinomina file"
+
+#: src/window.ui:2
+msgid "Rename"
+msgstr "Rinomina"
+
+#: src/window.ui:2
+msgid "Open folder"
+msgstr "Apri cartella"
+
+#: src/window.ui:2
+msgid "Copy path"
+msgstr "Copia percorso"
+
+#: src/window.ui:2
+msgid "New drawing"
+msgstr "Nuovo disegno"
+
+#: src/window.ui:2
+msgid "New"
+msgstr "Nuovo"
+
+#: src/window.ui:2
+msgid "Canvas size"
+msgstr "Dimensioni area di disegno"
+
+#: src/window.ui:2
+msgid "W:"
+msgstr "L:"
+
+#: src/window.ui:2
+msgid "H:"
+msgstr "A:"
+
+#: src/window.ui:2
+msgid "Background:"
+msgstr "Sfondo:"
+
+#: src/window.ui:2
+msgid "Create"
+msgstr "Crea"
+
+#: src/window.ui:2
+msgid "New from Clipboard"
+msgstr "Nuovo dagli appunti"
+
+#: src/window.ui:2
+msgid "Undo"
+msgstr "Annulla"
+
+#: src/window.ui:2
+msgid "Redo"
+msgstr "Ripeti"
+
+#: src/window.ui:2
+msgid "Clear canvas"
+msgstr "Pulisci area di disegno"
+
+#: src/window.ui:2
+msgid "System theme"
+msgstr "Tema di sistema"
+
+#: src/window.ui:2
+msgid "Light theme"
+msgstr "Tema chiaro"
+
+#: src/window.ui:2
+msgid "Dark theme"
+msgstr "Tema scuro"
+
+#: src/window.ui:2
+msgid "Show Tool Labels"
+msgstr "Mostra etichette strumenti"
+
+#: src/window.ui:2
+msgid "Center Canvas"
+msgstr "Centra area di disegno"
+
+#: src/window.ui:2
+msgid "Show Status Bar"
+msgstr "Mostra barra di stato"
+
+#: src/window.ui:2
+msgid "Show Grid"
+msgstr "Mostra griglia"
+
+#: src/window.ui:2
+msgid "Pixel View"
+msgstr "Visualizzazione pixel"
+
+#: src/window.ui:2
+msgid "Print..."
+msgstr "Stampa…"
+
+#: src/window.ui:2
+msgid "Save As..."
+msgstr "Salva con nome…"
+
+#: src/window.ui:2
+msgid "New Window"
+msgstr "Nuova finestra"
+
+#: src/window.ui:2
+msgid "Keyboard Shortcuts"
+msgstr "Scorciatoie da tastiera"
+
+#: src/window.ui:2
+msgid "About GPaint"
+msgstr "Informazioni su GPaint"
+
+#: src/window.ui:2
+msgid "Close"
+msgstr "Chiudi"
+
+#: src/window.ui:2
+msgid "Save (Ctrl+S)"
+msgstr "Salva (Ctrl+S)"
+
+#: src/window.ui:2
+msgid "Open Image (Ctrl+O)"
+msgstr "Apri immagine (Ctrl+O)"
+
+#: src/window.ui:2
+msgid "Selection"
+msgstr "Selezione"
+
+#: src/window.ui:2
+msgid "Rectangular selection"
+msgstr "Selezione rettangolare"
+
+#: src/window.ui:2
+msgid "Free selection"
+msgstr "Selezione libera"
+
+#: src/window.ui:2
+msgid "Select all"
+msgstr "Seleziona tutto"
+
+#: src/window.ui:2
+msgid "Import Image..."
+msgstr "Importa immagine…"
+
+#: src/window.ui:2
+msgid "Drawing tools"
+msgstr "Strumenti di disegno"
+
+#: src/window.ui:2
+msgid "Draw"
+msgstr "Disegna"
+
+#: src/window.ui:2
+msgid "Drawing"
+msgstr "Disegno"
+
+#: src/window.ui:2
+msgid "Brush"
+msgstr "Pennello"
+
+#: src/window.ui:2
+msgid "Pencil"
+msgstr "Matita"
+
+#: src/window.ui:2
+msgid "Highlighter"
+msgstr "Evidenziatore"
+
+#: src/window.ui:2
+msgid "Eraser"
+msgstr "Gomma"
+
+#: src/window.ui:2
+msgid "Utilities"
+msgstr "Utilità"
+
+#: src/window.ui:2
+msgid "Fill"
+msgstr "Riempimento"
+
+#: src/window.ui:2
+msgid "Color picker"
+msgstr "Contagocce"
+
+#: src/window.ui:2
+msgid "Elements"
+msgstr "Elementi"
+
+#: src/window.ui:2
+msgid "Points"
+msgstr "Punti"
+
+#: src/window.ui:2
+msgid "Geometric shapes"
+msgstr "Forme geometriche"
+
+#: src/window.ui:2
+msgid "Shapes"
+msgstr "Forme"
+
+#: src/window.ui:2
+msgid "Line"
+msgstr "Linea"
+
+#: src/window.ui:2
+msgid "Rectangle"
+msgstr "Rettangolo"
+
+#: src/window.ui:2
+msgid "Rounded rectangle"
+msgstr "Rettangolo arrotondato"
+
+#: src/window.ui:2
+msgid "Oval"
+msgstr "Ovale"
+
+#: src/window.ui:2
+msgid "Circle"
+msgstr "Cerchio"
+
+#: src/window.ui:2
+msgid "Polygon"
+msgstr "Poligono"
+
+#: src/window.ui:2
+msgid "Closed freehand"
+msgstr "Mano libera chiusa"
+
+#: src/window.ui:2
+msgid "Tool options"
+msgstr "Opzioni strumento"
+
+#: src/window.ui:2
+msgid "Options"
+msgstr "Opzioni"
+
+#: src/window.ui:2
+msgid "Primary color (left click)"
+msgstr "Colore primario (clic sinistro)"
+
+#: src/window.ui:2
+msgid "Swap colors"
+msgstr "Scambia colori"
+
+#: src/window.ui:2
+msgid "Secondary color (right click)"
+msgstr "Colore secondario (clic destro)"
+
+#: src/window.ui:2
+msgid "Brush thickness"
+msgstr "Spessore pennello"
+
+#: src/window.ui:2
+msgid "Thickness"
+msgstr "Spessore"
+
+#: src/window.ui:2
+msgid "Brush size"
+msgstr "Dimensione pennello"
+
+#: src/window.ui:2
+msgid "Move toolbar bottom/top"
+msgstr "Sposta barra strumenti in basso/alto"
+
+#: src/window.ui:2
+msgid "Resize Image"
+msgstr "Ridimensiona immagine"
+
+#: src/window.ui:2
+msgid "Unit:"
+msgstr "Unità:"
+
+#: src/window.ui:2
+msgid "Pixels (px)"
+msgstr "Pixel (px)"
+
+#: src/window.ui:2
+msgid "Centimeters (cm)"
+msgstr "Centimetri (cm)"
+
+#: src/window.ui:2
+msgid "Apply"
+msgstr "Applica"
+
+#: src/window.ui:2
+msgid "Reset"
+msgstr "Reimposta"
+
+#: src/shortcuts-dialog.ui:9
+msgctxt "shortcut window"
+msgid "New"
+msgstr "Nuovo"
+
+#: src/shortcuts-dialog.ui:15
+msgctxt "shortcut window"
+msgid "Open"
+msgstr "Open"
+
+#: src/shortcuts-dialog.ui:21
+msgctxt "shortcut window"
+msgid "Save"
+msgstr "Salva"
+
+#: src/shortcuts-dialog.ui:27
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Print"
+
+#: src/shortcuts-dialog.ui:33
+msgctxt "shortcut window"
+msgid "Undo"
+msgstr "Annulla"
+
+#: src/shortcuts-dialog.ui:39
+msgctxt "shortcut window"
+msgid "Redo"
+msgstr "Ripeti"
+
+#: src/shortcuts-dialog.ui:45
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quit"
+
+#: src/shortcuts-dialog.ui:53
+msgid "Edit"
+msgstr "Modifica"
+
+#: src/shortcuts-dialog.ui:56
+msgctxt "shortcut window"
+msgid "Copy"
+msgstr "Copia"
+
+#: src/shortcuts-dialog.ui:62
+msgctxt "shortcut window"
+msgid "Cut"
+msgstr "Taglia"
+
+#: src/shortcuts-dialog.ui:68
+msgctxt "shortcut window"
+msgid "Paste"
+msgstr "Incolla"
+
+#: src/shortcuts-dialog.ui:74
+msgctxt "shortcut window"
+msgid "Delete selection"
+msgstr "Elimina selezione"
+
+#: src/shortcuts-dialog.ui:82
+msgid "View"
+msgstr "Visualizza"
+
+#: src/shortcuts-dialog.ui:85
+msgctxt "shortcut window"
+msgid "Zoom in"
+msgstr "Ingrandisci"
+
+#: src/shortcuts-dialog.ui:91
+msgctxt "shortcut window"
+msgid "Zoom out"
+msgstr "Riduci"
+
+#: src/shortcuts-dialog.ui:97
+msgctxt "shortcut window"
+msgid "Reset zoom"
+msgstr "Reimposta zoom"
+
+#: src/shortcuts-dialog.ui:103
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "Scorciatoie da tastiera"
+
+#: src/shortcuts-dialog.ui:111
+msgid "Tools"
+msgstr "Strumenti"
+
+#: src/shortcuts-dialog.ui:114
+msgctxt "shortcut window"
+msgid "Brush"
+msgstr "Pennello"
+
+#: src/shortcuts-dialog.ui:120
+msgctxt "shortcut window"
+msgid "Pencil"
+msgstr "Matita"
+
+#: src/shortcuts-dialog.ui:126
+msgctxt "shortcut window"
+msgid "Eraser"
+msgstr "Gomma"
+
+#: src/shortcuts-dialog.ui:132
+msgctxt "shortcut window"
+msgid "Color picker"
+msgstr "Contagocce"
+
+#: src/shortcuts-dialog.ui:138
+msgctxt "shortcut window"
+msgid "Fill"
+msgstr "Riempimento"
+
+#: src/shortcuts-dialog.ui:144
+msgctxt "shortcut window"
+msgid "Selection"
+msgstr "Selezione"
+
+#: src/shortcuts-dialog.ui:150
+msgctxt "shortcut window"
+msgid "Text"
+msgstr "Testo"
+
+msgid "Clear All"
+msgstr "Cancella tutto"
+
+msgid "When I clear an image..."
+msgstr "Quando cancello un'immagine..."
+
+msgid "Fill the canvas with the primary color"
+msgstr "Riempi la tela con il colore primario"
+
+msgid "Fill the canvas with the secondary color"
+msgstr "Riempi la tela con il colore secondario"
+
+msgid "Fill the canvas with this color"
+msgstr "Riempi la tela con questo colore"
+
+msgid "Make the canvas transparent"
+msgstr "Rendi la tela trasparente"
+
+msgid "Saving"
+msgstr "Salvataggio"
+
+msgid "When a transparent image is saved as JPEG or BMP, transparency isn't supported. How should that space be filled with?"
+msgstr "Quando un'immagine trasparente viene salvata come JPEG o BMP, la trasparenza non è supportata. Come deve essere riempito quello spazio?"
+
+msgid "Color"
+msgstr "Colore"
+
+msgid "Checkerboard pattern"
+msgstr "Motivo a scacchi"
+
+msgid "Grid"
+msgstr "Griglia"
+
+msgid "Configure the drawing grid"
+msgstr "Configura la griglia di disegno"
+
+msgid "Grid size (pixels)"
+msgstr "Dimensione griglia (pixel)"
+
+msgid "Grid color"
+msgstr "Colore griglia"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Transparent selection"
+msgstr "Selezione trasparente"
+
+msgid "Invert selection"
+msgstr "Inverti selezione"
+
+#: src/window.js:218
+msgid "Clear Canvas?"
+msgstr "Cancellare l'area di disegno?"
+
+#: src/window.js:219
+msgid "Are you sure you want to clear the entire image? This action can be undone."
+msgstr "Sei sicuro di voler cancellare l'intera immagine? Questa azione può essere annullata."
+
+#: src/preferences.js:95
+msgid "Confirmations"
+msgstr "Conferme"
+
+#: src/preferences.js:96
+msgid "Show or hide confirmation dialogs before doing operations"
+msgstr "Configura i messaggi di conferma di sicurezza"
+
+#: src/preferences.js:101
+msgid "Ask for confirmation before clearing the canvas"
+msgstr "Chiedi conferma prima di cancellare l'area di disegno"
+
+msgid "Point selection"
+msgstr "Selezione punti"
+
+msgid "Shape:"
+msgstr "Forma:"
+
+msgid "Cross"
+msgstr "Croce"
+
+msgid "X cross"
+msgstr "Croce a X"
+
+msgid "Squared"
+msgstr "Quadrato"
+
+msgid "Add a number"
+msgstr "Aggiungi un numero"
+
+msgid "Next:"
+msgstr "Successivo:"
+
+msgid "Fill options"
+msgstr "Opzioni riempimento"
+
+msgid "Type:"
+msgstr "Modalità:"
+
+msgid "Circle and fill"
+msgstr "Accerchia e riempi"
+
+msgid "Remove and substitute"
+msgstr "Rimuovi e sostituisci"
+
+msgid "Whole image"
+msgstr "Intera immagine"
+
+msgid "Remove color"
+msgstr "Rimuovi colore"
+
+msgid "Roundness"
+msgstr "Arrotondamento"
+
+msgid "Outline options"
+msgstr "Opzioni contorno"
+
+msgid "Draw outline"
+msgstr "Disegna contorno"
+
+msgid "Outline color:"
+msgstr "Colore contorno:"
+
+msgid "Outline thickness:"
+msgstr "Spessore contorno:"
+
+msgid "Point size"
+msgstr "Dimensione punto"
+
+msgid "Brush options"
+msgstr "Opzioni pennello"
+
+msgid "Brush type:"
+msgstr "Tipo di pennello:"
+
+msgid "Simple"
+msgstr "Semplice"
+
+msgid "Airbrush"
+msgstr "Aerografo"
+
+msgid "Hairy"
+msgstr "Peloso"
+
+msgid "Calligraphic"
+msgstr "Calligrafico"
+
+msgid "Pencil options"
+msgstr "Opzioni matita"
+
+msgid "Line shape:"
+msgstr "Forma della linea:"
+
+msgid "Round"
+msgstr "Rotondo"
+
+msgid "Contour"
+msgstr "Contorno"
+
+msgid "Highlight options"
+msgstr "Opzioni evidenziatore"
+
+msgid "Add transparency"
+msgstr "Aggiungi trasparenza"
+
+msgid "Straighten"
+msgstr "Raddrizza"
+
+msgid "Dark text on light background"
+msgstr "Testo scuro su sfondo chiaro"
+
+msgid "Light text on dark background"
+msgstr "Testo chiaro su sfondo scuro"
+
+msgid "Eraser options"
+msgstr "Opzioni gomma"
+
+msgid "Eraser type:"
+msgstr "Tipo di gomma:"
+
+msgid "Normal"
+msgstr "Normale"
+
+msgid "Eraser mode:"
+msgstr "Modalità gomma:"
+
+msgid "Solid"
+msgstr "Solida"
+
+msgid "Blur"
+msgstr "Sfocatura"
+
+msgid "Mix blur"
+msgstr "Mix sfocatura"
+
+msgid "Mosaic"
+msgstr "Mosaico"
+
+msgid "Substitute with:"
+msgstr "Sostituisci con:"
+
+msgid "Transparency"
+msgstr "Trasparenza"
+
+msgid "Primary color"
+msgstr "Colore primario"
+
+msgid "Secondary color"
+msgstr "Colore secondario"
+
+msgid "Linear gradient"
+msgstr "Gradiente lineare"
+
+msgid "Font:"
+msgstr "Carattere:"
+
+msgid "Shadow"
+msgstr "Ombreggiatura"
+
+msgid "Contour:"
+msgstr "Contorno:"
+
+msgid "None"
+msgstr "Nessuno"
+
+msgid "Thin contour"
+msgstr "Contorno sottile"
+
+msgid "Thick contour"
+msgstr "Contorno spesso"
+
+msgid "Next number:"
+msgstr "Prossimo numero:"
+
+msgid "Reset to 1"
+msgstr "Resetta a 1"
+
+msgid "Line options"
+msgstr "Opzioni linea"
+
+msgid "Width:"
+msgstr "Larghezza:"
+
+msgid "Height:"
+msgstr "Altezza:"
+
+msgid "Open With..."
+msgstr "Apri con..."
+
+msgid "Brush (B)"
+msgstr "Pennello (B)"
+
+msgid "Pencil (P)"
+msgstr "Matita (P)"
+
+msgid "Eraser (E)"
+msgstr "Gomma (E)"
+
+msgid "Fill (F)"
+msgstr "Riempimento (F)"
+
+msgid "Color picker (C)"
+msgstr "Contagocce (C)"
+
+msgid "Text (T)"
+msgstr "Testo (T)"
+
+msgid "Antialiasing"
+msgstr "Antialiasing"
+
+msgid "Pixel"
+msgstr "Pixel"
+
+msgid "Mix pixels"
+msgstr "Mischia pixel"
+
+msgid "Gradient"
+msgstr "Gradiente"
+
+msgid "Locked direction"
+msgstr "Direzione bloccata"
+
+msgid "Arrow"
+msgstr "Freccia"
+
+msgid "Shapes options"
+msgstr "Opzioni forme"
+
+msgid "Fill:"
+msgstr "Riempimento:"
+
+msgid "Empty"
+msgstr "Vuoto"
+
+msgid "Selection options"
+msgstr "Opzioni selezione"
