@@ -13,7 +13,7 @@ const MAX_UNDO_STAGES = 10;
         const System = imports.system;
 import { showPreferencesWindow } from './preferences.js';
 import { shareImageFlatpak, importImage, saveCanvasToFileAs, openImageFromFile, saveCanvasToFile, addFileDialogFilters } from './file_dialogs.js';
-import { applyGradientFill, drawFreeSelectionPreview, drawStroke, drawRoundedRectangle, drawShapePreview, drawPolygonPreview, drawFreeshapePreview, drawFreeshape, pickColor, fixPixbufColors, floodFill } from './draw_tools.js';
+import { applyGradientFill, drawFreeSelectionPreview, drawStroke, drawRoundedRectangle, drawShapePreview, drawPolygonPreview, drawFreeshapePreview, drawFreeshape, drawHighlightStroke, pickColor, fixPixbufColors, floodFill } from './draw_tools.js';
 
 export const GnomepaintWindow = GObject.registerClass({
     GTypeName: 'GnomepaintWindow',
@@ -769,8 +769,23 @@ export const GnomepaintWindow = GObject.registerClass({
                 if (this._motionCount % 30 === 0){
                   System.gc();
                 }
-                const isFreehand = this._tool_brush.active || this._tool_pencil.active || (this._tool_highlight.active && !this._opt_highlight_straighten) || this._tool_eraser.active;
-                if (isFreehand && !this._isResizingCanvas && !this._isMovingSelection && !this._isResizingSelection) {
+                const isFreehandHighlight = this._tool_highlight.active && !this._opt_highlight_straighten;
+                const isFreehand = this._tool_brush.active || this._tool_pencil.active || this._tool_eraser.active;
+                
+                if (isFreehandHighlight && !this._isResizingCanvas && !this._isMovingSelection && !this._isResizingSelection) {
+                    if (this._isFirstDragUpdate) {
+                        this._isFirstDragUpdate = false;
+                    }
+                    if (this._highlightPoints) {
+                        this._highlightPoints.push({ x: zX, y: zY });
+                        let cr = new Cairo.Context(this._surface);
+                        cr.setOperator(Cairo.Operator.SOURCE);
+                        cr.setSourceSurface(this._backupSurface, 0, 0);
+                        cr.paint();
+                        drawHighlightStroke(this, this._isSecondaryDrag);
+                        cr = null;
+                    }
+                } else if (isFreehand && !this._isResizingCanvas && !this._isMovingSelection && !this._isResizingSelection) {
                     if (this._isFirstDragUpdate) {
                         this._lastX = zX;
                         this._lastY = zY;
@@ -1891,7 +1906,8 @@ if (this._selectionSurface && typeof this._selectionSurface.destroy === 'functio
                 this._saveToUndoStack();
 
                 const isShape = this._tool_line.active || this._tool_rect.active || this._tool_oval.active || this._tool_circle.active || (this._tool_highlight.active && this._opt_highlight_straighten);
-                if (isShape) {
+                const isFreehandHighlight = this._tool_highlight.active && !this._opt_highlight_straighten;
+                if (isShape || isFreehandHighlight) {
                     let cr = new Cairo.Context(this._backupSurface);
                     cr.setOperator(Cairo.Operator.SOURCE);
                     cr.setSourceSurface(this._surface, 0, 0);
@@ -1899,7 +1915,9 @@ if (this._selectionSurface && typeof this._selectionSurface.destroy === 'functio
                     cr = null;
                 }
 
-                if (this._tool_brush.active || this._tool_pencil.active || (this._tool_highlight.active && !this._opt_highlight_straighten) || this._tool_eraser.active) {
+                if (isFreehandHighlight) {
+                    this._highlightPoints = [{ x: zX, y: zY }];
+                } else if (this._tool_brush.active || this._tool_pencil.active || this._tool_eraser.active) {
                     this._drawStroke(zX, zY, false, isSecondary);
                 }
             }
@@ -2095,6 +2113,22 @@ if (this._selectionSurface && typeof this._selectionSurface.destroy === 'functio
 
         this._freeshapePoints = null;
         this._drawing_area.queue_draw();
+                }
+                return;
+            }
+
+            if (this._tool_highlight.active && !this._opt_highlight_straighten) {
+                if (this._highlightPoints && this._highlightPoints.length > 0) {
+                    let crRestore = new Cairo.Context(this._surface);
+                    crRestore.setOperator(Cairo.Operator.SOURCE);
+                    crRestore.setSourceSurface(this._backupSurface, 0, 0);
+                    crRestore.paint();
+                    crRestore = null;
+
+                    drawHighlightStroke(this, isSecondary);
+
+                    this._highlightPoints = null;
+                    this._drawing_area.queue_draw();
                 }
                 return;
             }
