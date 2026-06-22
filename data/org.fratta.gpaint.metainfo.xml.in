@@ -29,21 +29,30 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/fraaaaa4/GPaint/blob/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/1.png</image>
+      <image>https://raw.githubusercontent.com/fraaaaa4/GPaint/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/1.png</image>
       <caption>Drawing on the canvas</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/fraaaaa4/GPaint/blob/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/2.png</image>
+      <image>https://raw.githubusercontent.com/fraaaaa4/GPaint/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/2.png</image>
       <caption>Drawing on images</caption>
     </screenshot>
     <screenshot>
-      <image>https://github.com/fraaaaa4/GPaint/blob/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/3.png</image>
+      <image>https://raw.githubusercontent.com/fraaaaa4/GPaint/01a7ffa71c1983546e61dd18ffdbb81f1f765220/Screenshots/3.png</image>
       <caption>Shapes and stuff</caption>
     </screenshot>
   </screenshots>
 
   <releases>
-    <release version="1.0.0" date="2024-01-18">
+    <release version="1.0.1" date="2026-06-22">
+      <description translate="no">
+        <p>Version 1.0.1</p>
+        <ul>
+          <li>Fixed issue #1 on GitHub: The highlighter looks bad. Pull request from fastrizwaan</li>
+          <li>Fixed Flatpak manifest</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.0" date="2026-06-20">
       <description translate="no">
         <p>Initial release of GPaint.</p>
         <ul>

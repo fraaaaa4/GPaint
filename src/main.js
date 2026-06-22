@@ -53,7 +53,7 @@ export const GnomepaintApplication = GObject.registerClass(
                     application_name: _('GPaint'),
                     application_icon: 'org.fratta.gpaint',
                     developer_name: 'fratta',
-                    version: '1.0.0',
+                    version: '1.0.1',
                     developers: [
                         'fratta'
                     ],

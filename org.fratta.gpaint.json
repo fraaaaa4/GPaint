@@ -1,17 +1,16 @@
 {
-    "app-id": "org.fratta.gpaint",
+    "id": "org.fratta.gpaint",
     "runtime": "org.gnome.Platform",
     "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "org.fratta.gpaint",
-    "project-license": "GPL-3.0-or-later",
+    "appdata-license": "GPL-3.0-or-later",
     "finish-args": [
         "--share=ipc",
         "--socket=fallback-x11",
         "--socket=wayland",
         "--device=dri",
-        "--talk-name=org.freedesktop.portal.Desktop",
-    	"--talk-name=org.freedesktop.portal.Flatpak"
+        "--socket=cups"
     ],
     "cleanup": [
         "/include",
