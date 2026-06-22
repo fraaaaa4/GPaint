@@ -779,3 +779,37 @@ export function drawFreeSelectionPreview(window) {
     window._drawing_area.queue_draw();
 }
 
+export function drawHighlightStroke(window, isSecondary) {
+    if (!window._highlightPoints || window._highlightPoints.length === 0) return;
+
+    let cr = new Cairo.Context(window._surface);
+    const size = window._brush_size_scale.get_value();
+    cr.setAntialias(window._opt_highlight_antialias ? Cairo.Antialias.DEFAULT : Cairo.Antialias.NONE);
+
+    const col = window._getCurrentColor(isSecondary);
+    const opacity = window._opt_highlight_transparency ? 0.5 : 1.0;
+    cr.setSourceRGBA(col.r, col.g, col.b, opacity);
+    if (window._opt_highlight_bg === 'dark') {
+        cr.setOperator(Cairo.Operator.SCREEN);
+    } else {
+        cr.setOperator(Cairo.Operator.MULTIPLY);
+    }
+    
+    cr.setLineWidth(size);
+    cr.setLineCap(Cairo.LineCap.SQUARE);
+    cr.setLineJoin(Cairo.LineJoin.ROUND);
+
+    if (window._highlightPoints.length === 1) {
+        cr.rectangle(window._highlightPoints[0].x - size / 2, window._highlightPoints[0].y - size / 2, size, size);
+        cr.fill();
+    } else {
+        cr.moveTo(window._highlightPoints[0].x, window._highlightPoints[0].y);
+        for (let i = 1; i < window._highlightPoints.length; i++) {
+            cr.lineTo(window._highlightPoints[i].x, window._highlightPoints[i].y);
+        }
+        cr.stroke();
+    }
+
+    window._drawing_area.queue_draw();
+}
+
